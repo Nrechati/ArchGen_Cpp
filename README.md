@@ -34,7 +34,9 @@ Note that this project started as a way to gain time for my school project. Thus
 
 ```bash
 1. Create includes and srcs directories
+
 2. Generate a simple Makefile and main.cpp
+
 3. For each argument
 	if [I_*]
 		create only .hpp for Interface wich have pure method only
@@ -44,8 +46,11 @@ Note that this project started as a way to gain time for my school project. Thus
 		create regular cannonical class.cpp and .hpp
 
 	Every template is filled with the argument name as ClassName
+
 4. Add each created .hpp as include in main.cpp
+
 5. Add each .cpp as Makefile src
+
 6. Prompt for a Binary name change and change Makefile according to it
 ```
 
