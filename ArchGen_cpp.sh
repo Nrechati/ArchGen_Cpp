@@ -6,7 +6,7 @@
 #    By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:43:12 by nrechati          #+#    #+#              #
-#    Updated: 2019/10/18 17:04:35 by nrechati         ###   ########.fr        #
+#    Updated: 2019/10/18 17:56:31 by nrechati         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ ARCH_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 mkdir ./includes ./includes/core ./includes/class ./srcs ./srcs/core ./srcs/class
 cat $(echo "${ARCH_PATH}/srcs/Makefile_1") >> Makefile
-cat $(echo "${ARCH_PATH}/srcs/main_1") >> ./srcs/core/main.cpp
+cat $(echo "${ARCH_PATH}/srcs/main.cpp") >> ./srcs/core/main.cpp
 while [ $# -ne 0 ]
 do
 	upper="$(echo "$1" | tr a-z A-Z)"
@@ -64,14 +64,23 @@ do
 		sed -i '' "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
 	fi
 	touch "./includes/class/$1.hpp"
-	echo "#include \"class/$1.hpp\"" >> ./srcs/core/main.cpp
+
+	#*********
+	echo "#include \"class/$1.hpp\"" > $(echo "${ARCH_PATH}/srcs/tmp.cpp")
+	#*********
+
 	shift
 done
 printf "\n"
 printf "${LRED}${ROBOT}[Makefile]:\t\tCreating project Makefile\n${NC}"
 cat $(echo "${ARCH_PATH}/srcs/Makefile_2") >> Makefile
+
+	#*********
 printf "${LRED}${ROBOT}[Main.cpp]:\t\tCreating project placeholder main.cpp\n${NC}"
-cat $(echo "${ARCH_PATH}/srcs/main_2") >> ./srcs/core/main.cpp
+sed -i "" -e $'17 a\\\n'"$(cat $(echo "${ARCH_PATH}/srcs/tmp.cpp"))" ./srcs/core/main.cpp
+rm $(echo "${ARCH_PATH}/srcs/tmp.cpp")
+	#*********
+
 printf "\n"
 printf "${LCYAN}${ROBOT}[Binary name]: How you like to call your Binary ? $>  ${NC}"
 read name
