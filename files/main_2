@@ -1,0 +1,5 @@
+
+int		main() {
+	std::cout << "Placeholder Message" << std::endl;
+	return 0;
+}

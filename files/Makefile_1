@@ -1,0 +1,41 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile_1                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/05 16:33:44 by nrechati          #+#    #+#              #
+#    Updated: 2019/10/18 12:34:15 by nrechati         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#Pretty name [Calvin S]
+	HEADER += "   ╔╦╗┌─┐┬┌─┌─┐┌─┐┬┬  ┌─┐\n"
+	HEADER += "   ║║║├─┤├┴┐├┤ ├┤ ││  ├┤ \n"
+	HEADER += "   ╩ ╩┴ ┴┴ ┴└─┘└  ┴┴─┘└─┘\n"
+
+#Binary name
+NAME = Binary
+
+#Compilation
+DB = 0
+COMP_MODE = "Standard Compilation"
+CXX = clang++
+ifeq ($(DB),1)
+    COMP_MODE = "Debug Compilation"
+    CXXFLAGS = -g3 -Werror -Wall -Wextra -I $(INC_DIR)
+else
+	CXXFLAGS =  -Werror -Wall -Wextra -I $(INC_DIR)
+endif
+
+#Directories
+INC_DIR = includes/
+OBJ_DIR = obj/
+
+#Directories tree
+all_dir += $(CLASS_DIR)
+all_dir += $(CORE_DIR)
+
+#Sources
+CLASS_DIR = class/
