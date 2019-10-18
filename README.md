@@ -8,19 +8,19 @@ ArchGen for C++ is a simple bash script to auto generate C++ project file archit
 
 ## Installation
 
-1.  git clone the project
+1 - git clone the project
 ```bash
 gcl https://github.com/Nrechati/ArchGen_Cpp.git
 ```
 
-2. (Recommended) : make an alias
+2 - (Recommended) : make an alias
 ```bash
 echo "alias <alias_name>="sh path-to-ArchGen_Cpp.sh"" >> ~/.zshrc
 ```
 ## Usage
 
-1. You'll need to go to an empty directory where you wan't to generate the architecture
-2. Just run
+1 - You'll need to go to an empty directory where you wan't to generate the architecture
+2 - Just run
 ```bash
 archgen Class I_Interface A_AbstractClass
 ```
@@ -56,7 +56,6 @@ I specially know my Makefile is clearly not the best but you can change files in
 
 
 ## Contributing
-
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.

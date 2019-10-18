@@ -6,7 +6,7 @@
 #    By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:43:12 by nrechati          #+#    #+#              #
-#    Updated: 2019/10/18 16:59:51 by nrechati         ###   ########.fr        #
+#    Updated: 2019/10/18 17:04:35 by nrechati         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@
 LRED='\033[1;31m'
 LGREEN='\033[1;32m'
 YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
 LPURPLE='\033[1;35m'
 LCYAN='\033[1;36m'
 NC='\033[0m'
@@ -40,7 +39,7 @@ cat $(echo "${ARCH_PATH}/srcs/Makefile_1") >> Makefile
 cat $(echo "${ARCH_PATH}/srcs/main_1") >> ./srcs/core/main.cpp
 while [ $# -ne 0 ]
 do
-	upper="$(echo $1 | tr a-z A-Z)"
+	upper="$(echo "$1" | tr a-z A-Z)"
 	if [ "${1:0:2}" != "I_" ]
 	then
 		printf "${LCYAN}${ROBOT}[new Class]:\t\t${LGREEN}Creating ${YELLOW}$1 ${LGREEN}Classe srcs (.hpp and .cpp)\n${NC}"
