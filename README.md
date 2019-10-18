@@ -24,7 +24,7 @@ echo "alias <alias_name>="sh path-to-ArchGen_Cpp.sh"" >> ~/.zshrc
 1 - You'll need to go to an empty directory where you wan't to generate the architecture
 2 - Just run
 ```bash
-archgen Class I_Interface A_AbstractClass
+<alias_name> Class I_Interface A_AbstractClass
 ```
 NB : Arguments are the classes you want to build with the project. You need to prefix with "I_" for Interfaces and "A_" for Abstract classes.
 
