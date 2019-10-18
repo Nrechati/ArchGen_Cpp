@@ -6,31 +6,23 @@
 #    By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:43:12 by nrechati          #+#    #+#              #
-#    Updated: 2019/10/18 16:23:25 by nrechati         ###   ########.fr        #
+#    Updated: 2019/10/18 16:59:51 by nrechati         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
 
 #Colors
-RED='\033[0;31m'
 LRED='\033[1;31m'
-GREEN='\033[0;32m'
 LGREEN='\033[1;32m'
-ORANGE='\033[0;33m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-LBLUE='\033[ ;34m'
-PURPLE='\033[0;35m'
 LPURPLE='\033[1;35m'
-CYAN='\033[0;36m'
 LCYAN='\033[1;36m'
 NC='\033[0m'
 
 #Printing
-ARROW="▬▬ι═══════ﺤ"
 ROBOT="c[○┬●]כ  "
-GENTLEMAN="ಠ_ರೃ  "
 
 printf "${LCYAN}\n${NC}"
 printf "${LCYAN}    ╔═╗┬─┐┌─┐┬ ┬╔═╗┌─┐┌┐┌  ╔═╗╔═╗╔═╗     \n${NC}"
@@ -48,14 +40,14 @@ cat $(echo "${ARCH_PATH}/srcs/Makefile_1") >> Makefile
 cat $(echo "${ARCH_PATH}/srcs/main_1") >> ./srcs/core/main.cpp
 while [ $# -ne 0 ]
 do
-	upper=$(echo $1 | tr a-z A-Z)
-	if [ ${1:0:2} != "I_" ]
+	upper="$(echo $1 | tr a-z A-Z)"
+	if [ "${1:0:2}" != "I_" ]
 	then
 		printf "${LCYAN}${ROBOT}[new Class]:\t\t${LGREEN}Creating ${YELLOW}$1 ${LGREEN}Classe srcs (.hpp and .cpp)\n${NC}"
-		touch ./srcs/class/$1.cpp ./includes/class/$1.hpp
-		cat $(echo "${ARCH_PATH}/srcs/class.cpp") >> ./srcs/class/$1.cpp
+		touch "./srcs/class/$1.cpp" "./includes/class/$1.hpp"
+		cat "$(echo "${ARCH_PATH}/srcs/class.cpp")" >> ./srcs/class/$1.cpp
 		sed -i '' "s/Sample/$1/g" ./srcs/class/$1.cpp
-		if [ ${1:0:2} != "A_" ]
+		if [ "${1:0:2}" != "A_" ]
 		then
 			cat $(echo "${ARCH_PATH}/srcs/class.hpp") >> ./includes/class/$1.hpp
 			sed -i '' "s/Sample/$1/g" ./includes/class/$1.hpp
@@ -72,7 +64,7 @@ do
 		sed -i '' "s/Sample/$1/g" ./includes/class/$1.hpp
 		sed -i '' "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
 	fi
-	touch ./includes/class/$1.hpp
+	touch "./includes/class/$1.hpp"
 	echo "#include \"class/$1.hpp\"" >> ./srcs/core/main.cpp
 	shift
 done

@@ -6,7 +6,7 @@
 /*   By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:13:58 by nrechati          #+#    #+#             */
-/*   Updated: 2019/10/18 14:15:12 by nrechati         ###   ########.fr       */
+/*   Updated: 2019/10/18 16:55:05 by nrechati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Sample
 	public:
 		Sample(void);
 		Sample(Sample const& src);
-		~Sample(void);
+		virtual ~Sample(void);
 
 		Sample& operator=(Sample const& rhs);
 
