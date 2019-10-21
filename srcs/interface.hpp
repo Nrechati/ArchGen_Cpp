@@ -6,21 +6,21 @@
 /*   By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:14:15 by nrechati          #+#    #+#             */
-/*   Updated: 2019/10/18 16:55:09 by nrechati         ###   ########.fr       */
+/*   Updated: 2019/10/21 11:20:30 by nrechati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef I_SAMPLE_H
-# define I_SAMPLE_H
+#ifndef SAMPLE_H
+# define SAMPLE_H
 # include <iostream>
 
-class I_Sample
+class Sample
 {
 	public:
-		I_Sample(void);
-		virtual ~I_Sample(void);
+		Sample(void);
+		virtual ~Sample(void);
 
-		virtual void function(void) const;
+		virtual void function(void) const = 0;
 
 	private:
 };
