@@ -6,7 +6,7 @@
 /*   By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:14:17 by nrechati          #+#    #+#             */
-/*   Updated: 2019/10/22 08:41:59 by nrechati         ###   ########.fr       */
+/*   Updated: 2019/10/22 14:13:57 by nrechati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ Sample&		Sample::operator=(Sample const& rhs) {
 }
 
 std::ostream		&operator<<(std::ostream &out, Sample const &rhs) {
-	out << /* Print Message */ << std::endl;
+	out << " Print Message " << std::endl;
+	(void)rhs;
 	return (out);
 	}
 
