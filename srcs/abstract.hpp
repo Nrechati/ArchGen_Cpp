@@ -6,7 +6,7 @@
 /*   By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:14:08 by nrechati          #+#    #+#             */
-/*   Updated: 2019/10/18 14:34:21 by nrechati         ###   ########.fr       */
+/*   Updated: 2019/10/22 08:39:34 by nrechati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ class Sample
 
 		Sample& operator=(Sample const& rhs);
 
-		void	print(void) const;
-
 		virtual void function() const = 0;
 
 	private:
 };
+
+std::ostream	&operator<< (std::ostream &out, const Sample &rhs);
 
 #endif

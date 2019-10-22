@@ -6,7 +6,7 @@
 /*   By: nrechati <nrechati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:14:17 by nrechati          #+#    #+#             */
-/*   Updated: 2019/10/18 14:54:16 by nrechati         ###   ########.fr       */
+/*   Updated: 2019/10/22 08:41:59 by nrechati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,11 @@ Sample&		Sample::operator=(Sample const& rhs) {
 	return *this;
 }
 
-/*
+std::ostream		&operator<<(std::ostream &out, Sample const &rhs) {
+	out << /* Print Message */ << std::endl;
+	return (out);
+	}
+
+	/*
 ** Method and Member fucntion
 */
-void		Sample::print(void) const {
-	std::cout << "Print fct called" << std::endl;
-	return;
-}
