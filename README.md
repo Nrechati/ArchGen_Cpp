@@ -17,7 +17,7 @@ gcl https://github.com/Nrechati/ArchGen_Cpp.git
 
 2 - (Recommended) : make an alias
 ```bash
-echo "alias <alias_name>="sh path-to-ArchGen_Cpp.sh"" >> ~/.zshrc
+echo "alias <alias_name>="sh path-to-ArchGen_Cpp.sh"" >> .<your shell rc file>
 ```
 ## Usage
 
