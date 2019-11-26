@@ -79,8 +79,8 @@ printf "\n"
 if [ -n "$name" ]
 	then
 		sed -i '' "s/NAME = Binary/NAME = $name/" Makefile
-		printf "${LCYAN}${ROBOT}[Binary]: You're binary is now : ${YELLOW}$name\n${NC}"
+		printf "${LCYAN}${ROBOT}[Binary]: Your binary is now : ${YELLOW}$name\n${NC}"
 	else
-		printf "${LCYAN}${ROBOT}[Binary]: You're binary is called : ${YELLOW}Binary\n${NC}"
+		printf "${LCYAN}${ROBOT}[Binary]: Your binary is called : ${YELLOW}Binary\n${NC}"
 	fi
 

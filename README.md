@@ -6,7 +6,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a48310fa4faa48549d1998eddfc2169d)](https://www.codacy.com/manual/Nrechati/ft_ls?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nrechati/ft_ls&amp;utm_campaign=Badge_Grade)
 
-ArchGen for C++ is a simple bash script to auto generate C++ project file architecture
+ArchGen for C++ is a simple bash script to auto generate C++ project file structure 
 
 ## Installation
 
@@ -21,7 +21,7 @@ echo "alias <alias_name>="sh path-to-ArchGen_Cpp.sh"" >> ~/.zshrc
 ```
 ## Usage
 
-1 - You'll need to go to an empty directory where you wan't to generate the architecture
+1 - You'll need to go to an empty directory where you wan't to generate the architecture <br />
 2 - Just run
 ```bash
 <alias_name> Class I_Interface A_AbstractClass
@@ -30,7 +30,7 @@ NB : Arguments are the classes you want to build with the project. You need to p
 
 ## Functioning
 
-Note that this project started as a way to gain time for my school project. Thus this is not flawless at all. But I think this could be handy for some. I'll try to document here what the script do, so you can know what to expect from him.
+Note that this project started as a way to gain time for my school project. Thus this is not flawless at all. But I think this could be handy for some. I'll try to document here what the script do, so you can know what to expect from it.
 
 ```bash
 1. Create includes and srcs directories
@@ -62,5 +62,5 @@ I specially know my Makefile is clearly not the best but you can change files in
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 
-## My Other Project
+## My Other Projects
 [nrechati](https://github.com/Nrechati)
