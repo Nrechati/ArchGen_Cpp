@@ -4,6 +4,7 @@
 
 # ArchGen for C++
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a48310fa4faa48549d1998eddfc2169d)](https://www.codacy.com/manual/Nrechati/ft_ls?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nrechati/ft_ls&amp;utm_campaign=Badge_Grade)
 
 ArchGen for C++ is a simple bash script to auto generate C++ project file structure 
 
