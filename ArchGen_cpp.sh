@@ -37,36 +37,36 @@ ARCH_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 mkdir ./includes ./includes/core ./includes/class ./srcs ./srcs/core ./srcs/class
 cat $(echo "${ARCH_PATH}/srcs/Makefile_1") >> Makefile
 cat $(echo "${ARCH_PATH}/srcs/main_1") >> ./srcs/core/main.cpp
-while [ $# -ne 0 ]
-do
+if [ $# -ne 0 ]
+then
 	upper="$(echo "$1" | tr a-z A-Z)"
 	if [ "${1:0:2}" != "I_" ]
 	then
 		printf "${LCYAN}${ROBOT}[new Class]:\t\t${LGREEN}Creating ${YELLOW}$1 ${LGREEN}Classe srcs (.hpp and .cpp)\n${NC}"
 		touch "./srcs/class/$1.cpp" "./includes/class/$1.hpp"
 		cat "$(echo "${ARCH_PATH}/srcs/class.cpp")" >> ./srcs/class/$1.cpp
-		sed -i '' "s/Sample/$1/g" ./srcs/class/$1.cpp
+		sed -i "s/Sample/$1/g" ./srcs/class/$1.cpp
 		if [ "${1:0:2}" != "A_" ]
 		then
 			cat $(echo "${ARCH_PATH}/srcs/class.hpp") >> ./includes/class/$1.hpp
-			sed -i '' "s/Sample/$1/g" ./includes/class/$1.hpp
-			sed -i '' "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
+			sed -i "s/Sample/$1/g" ./includes/class/$1.hpp
+			sed -i "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
 		else
 			cat $(echo "${ARCH_PATH}/srcs/abstract.hpp") >> ./includes/class/$1.hpp
-			sed -i '' "s/Sample/$1/g" ./includes/class/$1.hpp
-			sed -i '' "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
+			sed -i "s/Sample/$1/g" ./includes/class/$1.hpp
+			sed -i "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
 		fi
 		echo "class_src += $1.cpp" >> Makefile
 	else
 		printf "${LPURPLE}${ROBOT}[new Interface]:\t${LGREEN}Creating ${YELLOW}$1 ${LGREEN}Interface srcs (.hpp and .cpp)\n${NC}"
 		cat $(echo "${ARCH_PATH}/srcs/interface.hpp") >> ./includes/class/$1.hpp
-		sed -i '' "s/Sample/$1/g" ./includes/class/$1.hpp
-		sed -i '' "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
+		sed -i "s/Sample/$1/g" ./includes/class/$1.hpp
+		sed -i "s/SAMPLE_H/${upper}_H/g" ./includes/class/$1.hpp
 	fi
 	touch "./includes/class/$1.hpp"
 	echo "#include \"class/$1.hpp\"" >> ./srcs/core/main.cpp
 	shift
-done
+fi
 printf "\n"
 printf "${LRED}${ROBOT}[Makefile]:\t\tCreating project Makefile\n${NC}"
 cat $(echo "${ARCH_PATH}/srcs/Makefile_2") >> Makefile
@@ -78,7 +78,7 @@ read name
 printf "\n"
 if [ -n "$name" ]
 	then
-		sed -i '' "s/NAME = Binary/NAME = $name/" Makefile
+		sed -i "s/NAME = Binary/NAME = $name/" Makefile
 		printf "${LCYAN}${ROBOT}[Binary]: Your binary is now : ${YELLOW}$name\n${NC}"
 	else
 		printf "${LCYAN}${ROBOT}[Binary]: Your binary is called : ${YELLOW}Binary\n${NC}"
