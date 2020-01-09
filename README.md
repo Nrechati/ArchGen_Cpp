@@ -4,7 +4,7 @@
 
 # ArchGen for C++
 
-ArchGen for C++ is a simple bash script to auto generate C++ project file structure 
+ArchGen for C++ is a simple bash script to auto generate C++ project file structure
 
 ## Installation
 
@@ -54,6 +54,20 @@ Note that this project started as a way to gain time for my school project. Thus
 
 I specially know my Makefile is clearly not the best but you can change files in "srcs" directories to replace them by what you want.
 
+
+## Screenshots
+
+### Running the script
+
+![Run](./Ressources/Screenshot/run.png)
+
+### Generated Tree
+
+![Tree](./Ressources/Screenshot/tree.png)
+
+### Compilation
+
+![Compile](./Ressources/Screenshot/compile.png)
 
 ## Further Ideas
 
