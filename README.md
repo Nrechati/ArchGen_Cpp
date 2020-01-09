@@ -59,15 +59,15 @@ I specially know my Makefile is clearly not the best but you can change files in
 
 ### Running the script
 
-![Run](./Ressources/Screenshot/run.png)
+![Run](./srcs/Screenshot/run.png)
 
 ### Generated Tree
 
-![Tree](./Ressources/Screenshot/tree.png)
+![Tree](./srcs/Screenshot/tree.png)
 
 ### Compilation
 
-![Compile](./Ressources/Screenshot/compile.png)
+![Compile](./srcs/Screenshot/compile.png)
 
 ## Further Ideas
 
