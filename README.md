@@ -4,8 +4,6 @@
 
 # ArchGen for C++
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a48310fa4faa48549d1998eddfc2169d)](https://www.codacy.com/manual/Nrechati/ft_ls?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nrechati/ft_ls&amp;utm_campaign=Badge_Grade)
-
 ArchGen for C++ is a simple bash script to auto generate C++ project file structure 
 
 ## Installation
@@ -56,6 +54,11 @@ Note that this project started as a way to gain time for my school project. Thus
 
 I specially know my Makefile is clearly not the best but you can change files in "srcs" directories to replace them by what you want.
 
+
+## Further Ideas
+
+- Need to be able to add a new class or file to an existing project
+- Linux Compatibility
 
 ## Contributing
 
