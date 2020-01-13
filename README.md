@@ -52,7 +52,7 @@ Note that this project started as a way to gain time for my school project. Thus
 6. Prompt for a Binary name change and change Makefile according to it
 ```
 
-I specially know my Makefile is clearly not the best but you can change files in "srcs" directories to replace them by what you want.
+> **Note :** All template for classes, abstract, interfaces and other generated files are in the *srcs* directory. I do know those are clearly not the best possible, but you can change files in "srcs" directories to replace them by what you want. As I know no template could suit anybody and this script is first for my personal use.
 
 
 ## Screenshots
